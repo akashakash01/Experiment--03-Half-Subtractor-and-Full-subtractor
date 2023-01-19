@@ -33,19 +33,42 @@ Write the detailed procedure here
 
 
 ## Program:
-/*
+D
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: AKASH R
+RegisterNumber:  22008463   
+module half_sub(x, y, d, b, x1);
+input x,y;
+output x1, d, b;
+xor(d, x, y);
+not(x1, x);
+and(b, x1, y);
+endmodule
+
+module full_sub(x, y, z, d, b, x1, x2, x3, x4, x5);
+input x,y,z;
+output d, b, x1, x2, x3, x4 ,x5;
+xor(x1, x, y);
+xor(d, x1, z);
+not(x2, x);
+and(x3, x2, y);
+and(x4, x3, z);
+and(x5, y, z);
+or(b, x3, x4, x5);
+endmodule
 
 ## Output:
+![WhatsApp Image 2023-01-19 at 20 04 19](https://user-images.githubusercontent.com/123085535/213473107-c842ddd0-54ee-4dd2-9628-098a7d7399c2.jpg)
 
 ## Truthtable
+![image](https://user-images.githubusercontent.com/123085535/213472571-218d4eee-30f9-47f3-b3a7-7b78bb81624c.png)
 
+![WhatsApp Image 2023-01-19 at 20 05 57](https://user-images.githubusercontent.com/123085535/213473187-241ecf58-97d6-4726-a579-eaa482226b07.jpg)
 
 
 ##  RTL realization
+![WhatsApp Image 2023-01-19 at 20 06 49](https://user-images.githubusercontent.com/123085535/213473235-0bd96052-3f30-4bc4-a7d6-bf1d1a69718a.jpg)
+![WhatsApp Image 2023-01-19 at 20 07 50](https://user-images.githubusercontent.com/123085535/213473280-1fbac62a-d1bf-4bd3-9ff8-2ba8169f41a4.jpg)
 
 
 ## Timing diagram 
